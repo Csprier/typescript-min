@@ -1,8 +1,9 @@
 console.log('Operational.');
 
-function add(n1: number, n2: number, showResult: boolean) {
+function add(n1: number, n2: number, showResult: boolean, phrase: string) {
   if (showResult) {
-    console.log(n1 + n2);
+    console.log(`${phrase} ${n1} + ${n2} = ${n1 + n2}`);
+
   } else {
     return n1 + n2;
   }
@@ -10,7 +11,7 @@ function add(n1: number, n2: number, showResult: boolean) {
 
 const number1 = 5;
 const number2 = 15;
-let printResult = true;
+const printResult = true;
+const resultPhrase = 'Result:';
 
-const result = add(number1, number2, printResult);
-console.log(result);
+add(number1, number2, printResult, resultPhrase);
